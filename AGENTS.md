@@ -27,6 +27,30 @@ Sean runs **GBrain** (Garry Tan's LLM-maintained knowledge base). It is the sour
 
 ## Iron laws
 
+### 0. Signal-detector subagent (MANDATORY)
+
+Before wrapping up any substantive turn (anything beyond a one-word "ok"/"thanks"), dispatch a signal-detector subagent via `delegate_task`. This is Garry Tan's explicit rule in `~/gbrain/skills/RESOLVER.md` ("Every inbound message → signal-detector, spawn parallel, don't block") and `~/gbrain/skills/signal-detector/SKILL.md`.
+
+**Why it exists.** Without the subagent, Sean's original thinking and entity mentions never make it into the brain. That breaks mission #2 — the brain only compounds if signals actually land.
+
+**How to invoke (copy this template verbatim):**
+
+```
+delegate_task(
+  goal="Act as GBrain signal-detector. Read ~/gbrain/skills/signal-detector/SKILL.md first, then follow its 3 phases on the conversation below: capture originals in exact user phrasing, detect+dedup entities, apply back-links + citations, commit and push ~/brain to origin. Report a one-line signal log.",
+  context="[paste the user's substantive message verbatim + any relevant preceding turn]",
+  toolsets=["terminal", "file"]
+)
+```
+
+**Skip when:** pure acknowledgments ("ok", "thanks", "yes", "do it", "got it"). These have no capturable signal.
+
+**Model policy.** `~/.hermes/config.yaml` has `delegation.model: anthropic/claude-sonnet-4.5`. Delegated subagents route to Sonnet. Do not pass a model override; let config resolve. Opus stays on the primary thread.
+
+**Self-audit.** If the last 3 content-rich turns went by without a signal-detector dispatch, you're drifting. Fire it now and note the miss.
+
+**Known limitation.** The config field is read at session start. If you changed it mid-session, delegation still routes to whatever the parent session loaded — restart to pick up changes. This was discovered 2026-04-20.
+
 ### 1. Brain-first lookup
 
 Before answering any factual question about people, companies, deals, missions, or history, run:
