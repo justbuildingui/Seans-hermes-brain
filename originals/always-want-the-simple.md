@@ -27,9 +27,13 @@ stage: active
 - [Scholastic Capital](../programs/scholastic-capital.md) — same principle likely applies to wind-down sequencing
 - [originals/brain-repo-owns-identity.md](brain-repo-owns-identity.md) — specific instance: one canonical location for identity files, no duplication
 - [originals/check-against-upstream-docs-before-agreeing.md](check-against-upstream-docs-before-agreeing.md) — adjacent bias toward verified-simple over clever-assumed
+- [originals/audit-whether-the-plumbing-actually-fires.md](audit-whether-the-plumbing-actually-fires.md) — simple plumbing is easier to audit for "did it fire?"
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited in [audit-whether-the-plumbing-actually-fires](audit-whether-the-plumbing-actually-fires.md) and [if-sean-has-to-ask-the-name-surface-it-louder](if-sean-has-to-ask-the-name-surface-it-louder.md) — simple systems have discoverable names and auditable traces by default; complexity erodes both. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — referenced in new originals
 Principle cited as the underlying bias behind [brain-repo-owns-identity](brain-repo-owns-identity.md) (one canonical location, no duplication) and referenced by [check-against-upstream-docs-before-agreeing](check-against-upstream-docs-before-agreeing.md) (verified over assumed). observed: signal-detector capture, 2026-04-20.

@@ -27,6 +27,8 @@ tags: [tool, knowledge-base, agent-infra, sean-mission-2]
 - "Complete" means pushed to GitHub, not just saved locally (see [complete-means-pushed-to-github](../originals/complete-means-pushed-to-github.md)).
 - Brain repo owns identity — SOUL.md and AGENTS.md live in `~/brain` and everywhere else symlinks back (see [brain-repo-owns-identity](../originals/brain-repo-owns-identity.md)).
 - Verify agent recommendations against the GBrain docs before agreeing (see [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md)).
+- Audit whether ambient GBrain plumbing (cron jobs, signal-detector subagent, hooks) is actually firing, not just configured (see [audit-whether-the-plumbing-actually-fires](../originals/audit-whether-the-plumbing-actually-fires.md)).
+- Surface canonical component names (`signal-detector`, `gbrain-live-sync`, etc.) wherever Sean works, so he never has to describe his own infra (see [if-sean-has-to-ask-the-name-surface-it-louder](../originals/if-sean-has-to-ask-the-name-surface-it-louder.md)).
 
 ## Open Threads
 - Tweet ingestion via xurl (paused cron; resume when authenticated)
@@ -44,7 +46,7 @@ tags: [tool, knowledge-base, agent-infra, sean-mission-2]
 <!-- timeline — append-only, reverse chronological -->
 
 ## 2026-04-20 — Referenced in new originals
-GBrain cited as the upstream authority in [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md) and the canonical home for identity files in [brain-repo-owns-identity](../originals/brain-repo-owns-identity.md). observed: signal-detector capture, 2026-04-20.
+GBrain cited as the upstream authority in [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md) and the canonical home for identity files in [brain-repo-owns-identity](../originals/brain-repo-owns-identity.md). Also referenced as the substrate whose ambient wiring is under audit in [audit-whether-the-plumbing-actually-fires](../originals/audit-whether-the-plumbing-actually-fires.md) and whose components need surfaced names in [if-sean-has-to-ask-the-name-surface-it-louder](../originals/if-sean-has-to-ask-the-name-surface-it-louder.md). observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — GBrain installed
 Sean and Ollie installed GBrain on Sean's Hermes deployment. Brain repo initialized at `~/brain`, pushed to `github.com/justbuildingui/Seans-hermes-brain`. Engine: PGLite. Cron jobs configured: live-sync (15m), tweet-ingest (paused), dream-cycle (2am CT), weekly-doctor (Sun 7am CT), auto-update (notify-only, every 4h). Sean designated it mission #2. observed: GBrain install conversation with Ollie.

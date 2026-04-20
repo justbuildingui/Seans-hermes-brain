@@ -25,9 +25,13 @@ stage: active
 - [SOUL.md](../SOUL.md) — source directive ("do everything completely")
 - [AGENTS.md](../AGENTS.md) — Iron Law #6 (write flow), which should always terminate at a pushed state
 - [originals/hold-the-line-on-upstream-rules.md](hold-the-line-on-upstream-rules.md) — companion principle on discipline
+- [originals/audit-whether-the-plumbing-actually-fires.md](audit-whether-the-plumbing-actually-fires.md) — same family: "done" and "fired" are both observable-artifact tests, not claims
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited as a sibling principle in [audit-whether-the-plumbing-actually-fires](audit-whether-the-plumbing-actually-fires.md) — both treat observable artifacts (a push to origin / a visible trace of execution) as the real completion/firing test, rather than a described state. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 Sean said: "This is an example of the soul.md where I said to do everything completely. Filing this on Github is 'complete'" during the GBrain install conversation with Ollie, defining the completeness threshold for brain work. observed: GBrain install conversation, 2026-04-20.

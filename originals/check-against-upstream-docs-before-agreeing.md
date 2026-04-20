@@ -33,9 +33,14 @@ stage: active
 - [AGENTS.md](../AGENTS.md) — Iron Law #1 (brain-first lookup); same epistemic shape applied to factual questions
 - [concepts/gbrain.md](../concepts/gbrain.md) — the upstream authority being checked in the originating moment
 - [Garry Tan](../people/garry-tan.md) — author of the GBrain docs Sean reflexively defers to
+- [originals/audit-whether-the-plumbing-actually-fires.md](audit-whether-the-plumbing-actually-fires.md) — runtime-evidence twin of this principle (verify execution, not just docs)
+- [originals/if-sean-has-to-ask-the-name-surface-it-louder.md](if-sean-has-to-ask-the-name-surface-it-louder.md) — naming surfacing gap discovered in the same conversation
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new originals
+Cited as the epistemic companion of [audit-whether-the-plumbing-actually-fires](audit-whether-the-plumbing-actually-fires.md) (docs direction ↔ runtime-evidence direction) and referenced from [if-sean-has-to-ask-the-name-surface-it-louder](if-sean-has-to-ask-the-name-surface-it-louder.md). observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 During an identity-wiring discussion, Ollie recommended option 1 (brain repo owns identity). Sean's first response was not agreement but verification: "Is 1 what the g brain docs say?" — a reflexive check of the recommendation against the tool's own documentation. This pattern — treat agent recommendations as hypotheses until they are sourced to upstream docs — became a durable operating principle. It complements [hold-the-line-on-upstream-rules](hold-the-line-on-upstream-rules.md) from the opposite direction: agents push back when Sean violates upstream rules; Sean pushes back when agents might be misquoting them. observed: Hermes identity-wiring conversation with Ollie, 2026-04-20.

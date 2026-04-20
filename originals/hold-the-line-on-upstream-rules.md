@@ -29,9 +29,13 @@ stage: active
 - [originals/check-against-upstream-docs-before-agreeing.md](check-against-upstream-docs-before-agreeing.md) — the mirror principle: Sean checks agent recommendations against upstream docs
 - [originals/brain-repo-owns-identity.md](brain-repo-owns-identity.md) — example of an upstream-rule-driven architectural choice
 - [Garry Tan](../people/garry-tan.md) — author of the upstream rule that triggered this correction
+- [originals/audit-whether-the-plumbing-actually-fires.md](audit-whether-the-plumbing-actually-fires.md) — same family: defer to sources of truth (docs) *and* demand runtime proof that wiring actually ran
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited in [audit-whether-the-plumbing-actually-fires](audit-whether-the-plumbing-actually-fires.md) as the doctrinal-compliance sibling of runtime-evidence auditing — both are ways Sean treats upstream authority / observable artifacts as load-bearing over in-the-moment assertions. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — referenced in new originals
 Linked as the companion to [check-against-upstream-docs-before-agreeing](check-against-upstream-docs-before-agreeing.md) — both principles treat upstream documentation as the load-bearing authority, from opposite directions. observed: signal-detector capture, 2026-04-20.
