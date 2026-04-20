@@ -26,9 +26,13 @@ stage: active
 - [AGENTS.md](../AGENTS.md) — Iron Law #6 (write flow), which should always terminate at a pushed state
 - [originals/hold-the-line-on-upstream-rules.md](hold-the-line-on-upstream-rules.md) — companion principle on discipline
 - [originals/audit-whether-the-plumbing-actually-fires.md](audit-whether-the-plumbing-actually-fires.md) — same family: "done" and "fired" are both observable-artifact tests, not claims
+- [originals/if-its-not-in-the-repo-it-doesnt-exist.md](if-its-not-in-the-repo-it-doesnt-exist.md) — narrower corollary: this one sets *when* work is done (pushed), that one sets *where* durable state must live (repo)
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited as the *timing* sibling of [if-its-not-in-the-repo-it-doesnt-exist](if-its-not-in-the-repo-it-doesnt-exist.md), which captures the *location* rule ("all of our stuff should be there") after Sean caught Ollie making session-local filesystem changes without committing them. Together the pair defines durability: repo = the only place state counts, and push = the moment state becomes real. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — referenced in new original
 Cited as a sibling principle in [audit-whether-the-plumbing-actually-fires](audit-whether-the-plumbing-actually-fires.md) — both treat observable artifacts (a push to origin / a visible trace of execution) as the real completion/firing test, rather than a described state. observed: signal-detector capture, 2026-04-20.

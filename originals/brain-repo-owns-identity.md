@@ -35,9 +35,13 @@ stage: active
 - [originals/complete-means-pushed-to-github.md](complete-means-pushed-to-github.md) — completion discipline; brain-owned identity only works if it's pushed
 - [concepts/gbrain.md](../concepts/gbrain.md) — the tool that hosts the canonical files
 - [Garry Tan](../people/garry-tan.md) — author of GBrain, whose design assumes a single brain repo as source of truth
+- [originals/if-its-not-in-the-repo-it-doesnt-exist.md](if-its-not-in-the-repo-it-doesnt-exist.md) — generalizes this rule from identity to all durable state
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited as the architectural twin of [if-its-not-in-the-repo-it-doesnt-exist](if-its-not-in-the-repo-it-doesnt-exist.md). That page generalizes the same logic beyond identity: any durable state (scripts, PATH fixes, symlinks, env bootstrap) must live in the brain repo, not in session-local filesystem. Triggered after Sean caught Ollie making `/usr/local/bin` symlinks and PATH changes that weren't committed. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 Sean chose GBrain as the canonical home for SOUL.md and AGENTS.md when asked whether to house them in the brain repo or in `~/.hermes/`. Exact phrasing: "Lets do 1 and have that as the key file to follow on the seans-hermes-brain please." This established the operating principle that the brain repo owns identity and all other locations symlink back. Pre-symlink backups of the prior Hermes-config versions were preserved as `.pre-brain-bak`. observed: Hermes identity-wiring conversation with Ollie, 2026-04-20.

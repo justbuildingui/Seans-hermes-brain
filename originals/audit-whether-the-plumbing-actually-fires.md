@@ -32,9 +32,13 @@ stage: active
 - [originals/always-want-the-simple.md](always-want-the-simple.md) — adjacent bias: simple systems are easier to audit for "did it fire?"
 - [AGENTS.md](../AGENTS.md) — Iron Law #0 (signal-detector subagent MANDATORY) and the Active cron jobs table — the specific plumbing being audited
 - [concepts/gbrain.md](../concepts/gbrain.md) — GBrain is the substrate whose ambient wiring is under audit
+- [originals/if-its-not-in-the-repo-it-doesnt-exist.md](if-its-not-in-the-repo-it-doesnt-exist.md) — durability twin: observable-artifact rule applied to state location (repo vs. session-local filesystem)
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new original
+Cited as an epistemic sibling of [if-its-not-in-the-repo-it-doesnt-exist](if-its-not-in-the-repo-it-doesnt-exist.md). Both principles reject the described state and demand an observable artifact — this one for runtime firing, that one for durable state (must be a commit on origin, not a live-filesystem mutation). observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 On the same Hermes/GBrain bring-up day, Sean twice pressure-tested ambient infra against runtime evidence rather than configuration claims. First: "I 100% want to ensure that sonnet is what's using this" — not accepting that delegated subagents ran on Sonnet 4.5 until `~/.hermes/config.yaml` was inspected and `delegation.model: anthropic/claude-sonnet-4.5` was read out. Second: after Ollie confirmed the signal-detector subagent exists and is pinned to Sonnet, Sean asked "is it actually firing on these messages and what is it called" — refusing to treat "it's wired up" as proof that the loop was actually running. Both moments share the same shape: an assertion about plumbing is not a fact about plumbing; only an observed trace is. observed: Hermes/GBrain bring-up conversation with Ollie, 2026-04-20 ~20:53 CT.
