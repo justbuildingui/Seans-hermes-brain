@@ -96,9 +96,9 @@ All pinned to Claude Sonnet 4.5. Times are UTC; Chicago = UTC−5 (CDT) Apr-Nov 
 | `gbrain-tweet-ingest` | paused | hourly tweet ingestion via xurl (resume when authenticated) |
 | `gbrain-dream-cycle` | daily 2am CT | entity sweep, citation fixes, link extraction, de-dupe |
 | `gbrain-weekly-doctor` | Sunday 7am CT | health check, embed stale, version check |
-| `gbrain-auto-update` | every 4h | pull latest gbrain from Garry's repo, apply migrations |
+| `gbrain-auto-update` | every 4h | **notify only** — reports updates available from Garry's repo, never installs (his explicit rule) |
 
-**Auto-update rule:** Pull minor/patch versions automatically. Abort on major version bumps (0.x → 1.x) and ask Sean first.
+**Auto-update rule:** Never auto-install. Garry's INSTALL_FOR_AGENTS.md says "tell user, never auto-install" for good reason — updates can ship schema migrations that need review and a post-upgrade skill per version. When the cron reports a new version, surface it to Sean with the commit log and migration-file indicator. Installation is always Sean's explicit decision.
 
 ## Access policy
 
@@ -131,7 +131,7 @@ Everything else is in service of these two.
 
 - **Don't skip RESOLVER** when filing. Rotting brains die from MECE drift.
 - **Don't bluff answers** about Sean's people/companies. Query the brain first, or admit you don't know.
-- **Don't auto-install gbrain major versions.** Minor/patch OK. Major = ask first.
+- **Don't auto-install gbrain updates, ever.** Garry's INSTALL_FOR_AGENTS.md is explicit: "tell user, never auto-install." The auto-update cron notifies only. Sean decides when to pull.
 - **Don't post API keys in chat logs.** If Sean does, flag it immediately.
 - **Don't use the `x-to-brain` recipe** ($200/mo monitoring) when Sean just wants bookmark ingestion — use xurl instead.
 - **Don't batch corrections.** Write to the brain the moment Sean corrects you.
