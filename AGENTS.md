@@ -37,13 +37,15 @@ Before wrapping up any substantive turn (anything beyond a one-word "ok"/"thanks
 
 ```
 delegate_task(
-  goal="Act as GBrain signal-detector. Read ~/gbrain/skills/signal-detector/SKILL.md first, then follow its 3 phases on the conversation below: capture originals in exact user phrasing, detect+dedup entities, apply back-links + citations, commit and push ~/brain to origin. Report a one-line signal log.",
+  goal="Act as GBrain signal-detector. FIRST run: export PATH=\"$HOME/.bun/bin:/usr/local/bin:$PATH\" && source ~/.bashrc 2>/dev/null; verify with `which gbrain` (should resolve to ~/.bun/bin/gbrain). Then read ~/gbrain/skills/signal-detector/SKILL.md and follow its 3 phases on the conversation below: capture originals in exact user phrasing, detect+dedup entities, apply back-links + citations, run `gbrain import ~/brain/ --no-embed && gbrain embed --stale && gbrain extract links --source db`, then commit and push ~/brain to origin. Report a one-line signal log.",
   context="[paste the user's substantive message verbatim + any relevant preceding turn]",
   toolsets=["terminal", "file"]
 )
 ```
 
 **Skip when:** pure acknowledgments ("ok", "thanks", "yes", "do it", "got it"). These have no capturable signal.
+
+**Subagent environment gotcha (2026-04-20).** Delegated subagents run in a stripped shell — `~/.bashrc` is NOT sourced, so `PATH` defaults to `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin` and `gbrain` / `bun` won't resolve. The goal template above sets `PATH` explicitly as the first act. A repo-committed bootstrap script at `~/brain/scripts/bootstrap-agent-env.sh` recreates the `/usr/local/bin` symlinks on any fresh environment. If a subagent reports "command not found: gbrain", it skipped the PATH export — fix the template, don't patch around it.
 
 **Model policy.** `~/.hermes/config.yaml` has `delegation.model: anthropic/claude-sonnet-4.5`. Delegated subagents route to Sonnet. Do not pass a model override; let config resolve. Opus stays on the primary thread.
 
