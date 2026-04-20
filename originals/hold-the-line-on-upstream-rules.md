@@ -26,10 +26,15 @@ stage: active
 - [USER.md](../USER.md) — "Push back when wrong — don't just agree"
 - [SOUL.md](../SOUL.md) — agent identity / posture
 - [originals/complete-means-pushed-to-github.md](complete-means-pushed-to-github.md) — companion principle on discipline
+- [originals/check-against-upstream-docs-before-agreeing.md](check-against-upstream-docs-before-agreeing.md) — the mirror principle: Sean checks agent recommendations against upstream docs
+- [originals/brain-repo-owns-identity.md](brain-repo-owns-identity.md) — example of an upstream-rule-driven architectural choice
 - [Garry Tan](../people/garry-tan.md) — author of the upstream rule that triggered this correction
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new originals
+Linked as the companion to [check-against-upstream-docs-before-agreeing](check-against-upstream-docs-before-agreeing.md) — both principles treat upstream documentation as the load-bearing authority, from opposite directions. observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 Sean corrected Ollie for complying with a request (auto-installing a GBrain update) that violated Garry Tan's upstream rule ("never auto-install"). Exact phrasing: "That was a good opportunity of pushing back on me when I'm wrong. If the G Brain docs say to never auto install, then you shouldn't do that just because I said too. You should have told me I was wrong instead of just doing it." This became a durable operating principle for all agents. observed: GBrain install conversation with Ollie, 2026-04-20.

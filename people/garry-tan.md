@@ -20,10 +20,15 @@ role: President & CEO, Y Combinator
 ## See Also
 - [GBrain](../concepts/gbrain.md) — the system he created
 - [originals/hold-the-line-on-upstream-rules.md](../originals/hold-the-line-on-upstream-rules.md) — Sean's principle that Garry's upstream rules override Sean's in-the-moment asks
+- [originals/check-against-upstream-docs-before-agreeing.md](../originals/check-against-upstream-docs-before-agreeing.md) — Sean verifies agent recommendations against Garry's GBrain docs before agreeing
+- [originals/brain-repo-owns-identity.md](../originals/brain-repo-owns-identity.md) — architectural choice aligned with Garry's single-brain-repo design assumption
 - [AGENTS.md](../AGENTS.md) — references Garry's "never auto-install" rule in the pitfalls section
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — Referenced in new originals
+Garry's GBrain docs became the upstream authority cited in [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md) ("Is 1 what the g brain docs say?") and the design assumption underlying [brain-repo-owns-identity](../originals/brain-repo-owns-identity.md). observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — page created
 Created during GBrain install signal-detector pass. Sean invoked Garry's `INSTALL_FOR_AGENTS.md` ("tell user, never auto-install") as the upstream rule Ollie should have held the line on. Source: GBrain install conversation with Ollie; upstream rule at `~/gbrain/INSTALL_FOR_AGENTS.md`.

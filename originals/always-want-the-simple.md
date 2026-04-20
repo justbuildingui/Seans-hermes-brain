@@ -25,9 +25,14 @@ stage: active
 - [USER.md](../USER.md) — "Always prefers the simple option" codified in communication preferences
 - [AGENTS.md](../AGENTS.md) — pitfall: don't use `x-to-brain` when xurl suffices
 - [Scholastic Capital](../programs/scholastic-capital.md) — same principle likely applies to wind-down sequencing
+- [originals/brain-repo-owns-identity.md](brain-repo-owns-identity.md) — specific instance: one canonical location for identity files, no duplication
+- [originals/check-against-upstream-docs-before-agreeing.md](check-against-upstream-docs-before-agreeing.md) — adjacent bias toward verified-simple over clever-assumed
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-20 — referenced in new originals
+Principle cited as the underlying bias behind [brain-repo-owns-identity](brain-repo-owns-identity.md) (one canonical location, no duplication) and referenced by [check-against-upstream-docs-before-agreeing](check-against-upstream-docs-before-agreeing.md) (verified over assumed). observed: signal-detector capture, 2026-04-20.
 
 ## 2026-04-20 — original captured
 Sean said: "You should know that I always want the simple. so we'll use xurl later on once the brain is ready for that step" during the GBrain install conversation with Ollie while choosing between `x-to-brain` (paid, complex) and `xurl` (simple) for tweet ingestion. observed: GBrain install conversation, 2026-04-20.
