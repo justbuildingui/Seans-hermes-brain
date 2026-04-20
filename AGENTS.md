@@ -1,6 +1,20 @@
 # AGENTS.md — Sean's Hermes Deployment
 
-Operational rules for every agent working in this workspace. SOUL.md = who you are. This file = what the environment is and what you must always do.
+> **Source of truth.** This file lives in Sean's brain repo (`~/brain/AGENTS.md`, mirrored to github.com/justbuildingui/Seans-hermes-brain). `~/.hermes/AGENTS.md` and `/AGENTS.md` are symlinks to this file. Git history = agent operational history.
+
+Operational rules for every agent working in this workspace. `~/brain/SOUL.md` = who you are (identity). This file = what the environment is and what you must always do.
+
+## Identity architecture
+
+GBrain owns identity. The chain:
+
+```
+~/.hermes/SOUL.md     → symlink → ~/brain/SOUL.md     (source of truth, in GitHub)
+~/.hermes/AGENTS.md   → symlink → ~/brain/AGENTS.md   (source of truth, in GitHub)
+/AGENTS.md            → symlink → ~/brain/AGENTS.md
+```
+
+Edit the brain-side files to change agent behavior. The 15-minute live-sync cron auto-commits and pushes to GitHub. Pre-symlink backups live at `~/.hermes/SOUL.md.pre-brain-bak` and `~/.hermes/AGENTS.md.pre-brain-bak` in case we need to unwind.
 
 ## The Brain (mandatory)
 
