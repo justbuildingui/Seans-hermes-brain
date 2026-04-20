@@ -26,5 +26,8 @@ started: 2026-04
 ---
 <!-- timeline -->
 
+## 2026-04-20 — Referenced in [concepts/gbrain](../concepts/gbrain.md)
+Listed as a "See Also" from the GBrain concept page (Sean's active programs context). Source: GBrain install conversation with Ollie.
+
 ## 2026-04-20 — program created
 Sean mentioned he's starting Ironman training during Ollie soul-audit. Source: soul-audit conversation.
