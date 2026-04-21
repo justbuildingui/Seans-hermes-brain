@@ -47,7 +47,7 @@ delegate_task(
 
 **Subagent environment gotcha (2026-04-20).** Delegated subagents run in a stripped shell — `~/.bashrc` is NOT sourced, so `PATH` defaults to `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin` and `gbrain` / `bun` won't resolve. The goal template above sets `PATH` explicitly as the first act. A repo-committed bootstrap script at `~/brain/scripts/bootstrap-agent-env.sh` recreates the `/usr/local/bin` symlinks on any fresh environment. If a subagent reports "command not found: gbrain", it skipped the PATH export — fix the template, don't patch around it.
 
-**Model policy.** `~/.hermes/config.yaml` has `delegation.model: anthropic/claude-sonnet-4.5`. Delegated subagents route to Sonnet. Do not pass a model override; let config resolve. Opus stays on the primary thread.
+**Model policy.** `~/.hermes/config.yaml` has `delegation.model: anthropic/claude-sonnet-4.6`. Delegated subagents route to Sonnet. Do not pass a model override; let config resolve. Sonnet 4.6 is now the default for all sessions (primary + delegation).
 
 **Self-audit.** If the last 3 content-rich turns went by without a signal-detector dispatch, you're drifting. Fire it now and note the miss.
 
@@ -128,7 +128,7 @@ When triggered to create or enrich a person/company → use `~/gbrain/skills/enr
 
 ## Active cron jobs
 
-All pinned to Claude Sonnet 4.5. Times are UTC; Chicago = UTC−5 (CDT) Apr-Nov / UTC−6 (CST) Nov-Apr.
+All pinned to Claude Sonnet 4.6. Times are UTC; Chicago = UTC−5 (CDT) Apr-Nov / UTC−6 (CST) Nov-Apr.
 
 | Job | Cadence | Purpose |
 |-----|---------|---------|
@@ -146,7 +146,7 @@ All pinned to Claude Sonnet 4.5. Times are UTC; Chicago = UTC−5 (CDT) Apr-Nov 
 
 ## Model policy
 
-- **Interactive chat (Ollie)** — Opus 4.7 via OpenRouter.
+- **Interactive chat (Ollie)** — Sonnet 4.6 via OpenRouter.
 - **Background/recurring jobs** — Claude Sonnet 4.5.
 - **Embeddings** — OpenAI `text-embedding-3-large` (deterministic, no LLM).
 - **Query expansion** — Claude Haiku 4.5 (when `ANTHROPIC_API_KEY` is set, otherwise skipped).
