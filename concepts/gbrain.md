@@ -42,9 +42,14 @@ tags: [tool, knowledge-base, agent-infra, sean-mission-2]
 - [programs/ironman-training.md](../programs/ironman-training.md)
 - [AGENTS.md](../AGENTS.md)
 - [SOUL.md](../SOUL.md)
+- [concepts/obsidian.md](obsidian.md) — explored as potential storage hub alternative to GitHub
+- [originals/obsidian-as-storage-hub-for-gbrain.md](../originals/obsidian-as-storage-hub-for-gbrain.md)
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-21 — Obsidian-as-storage-hub explored; openhue archived
+Sean asked whether Obsidian could replace GitHub as the sync layer for `~/brain/`. Key findings: `~/brain/` is already a valid Obsidian vault (all markdown); GBrain engine is filesystem-agnostic; git provides audit trail for agent writes that Obsidian Sync would lose; both can run simultaneously. Also: Sean archived `openhue` (smart-home skill) to save tokens. See [originals/obsidian-as-storage-hub-for-gbrain.md](../originals/obsidian-as-storage-hub-for-gbrain.md). *self-described: Sean's direct question and reasoning, 2026-04-21.*
 
 ## 2026-04-21 — Hermes skills pruned; minimal-load principle adopted
 Sean archived `gaming/`, `mlops/`, `red-teaming/`, `heartmula/`, `songsee/` to `~/.hermes/skills/_archive/`. Explicit preference: only load skills relevant to active work (Scholastic Capital wind-down + GBrain). Captured in [only-load-skills-relevant-to-active-work](../originals/only-load-skills-relevant-to-active-work.md). *self-described: Sean's direct statement, 2026-04-21.*
