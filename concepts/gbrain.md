@@ -29,6 +29,7 @@ tags: [tool, knowledge-base, agent-infra, sean-mission-2]
 - Verify agent recommendations against the GBrain docs before agreeing (see [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md)).
 - Audit whether ambient GBrain plumbing (cron jobs, signal-detector subagent, hooks) is actually firing, not just configured (see [audit-whether-the-plumbing-actually-fires](../originals/audit-whether-the-plumbing-actually-fires.md)).
 - Surface canonical component names (`signal-detector`, `gbrain-live-sync`, etc.) wherever Sean works, so he never has to describe his own infra (see [if-sean-has-to-ask-the-name-surface-it-louder](../originals/if-sean-has-to-ask-the-name-surface-it-louder.md)).
+- Keep Hermes skills minimal — only load what's relevant to active work (Scholastic Capital wind-down + GBrain). Non-active skills archived, not deleted (see [only-load-skills-relevant-to-active-work](../originals/only-load-skills-relevant-to-active-work.md)).
 
 ## Open Threads
 - Tweet ingestion via xurl (paused cron; resume when authenticated)
@@ -44,6 +45,9 @@ tags: [tool, knowledge-base, agent-infra, sean-mission-2]
 
 ---
 <!-- timeline — append-only, reverse chronological -->
+
+## 2026-04-21 — Hermes skills pruned; minimal-load principle adopted
+Sean archived `gaming/`, `mlops/`, `red-teaming/`, `heartmula/`, `songsee/` to `~/.hermes/skills/_archive/`. Explicit preference: only load skills relevant to active work (Scholastic Capital wind-down + GBrain). Captured in [only-load-skills-relevant-to-active-work](../originals/only-load-skills-relevant-to-active-work.md). *self-described: Sean's direct statement, 2026-04-21.*
 
 ## 2026-04-20 — Referenced in new originals
 GBrain cited as the upstream authority in [check-against-upstream-docs-before-agreeing](../originals/check-against-upstream-docs-before-agreeing.md) and the canonical home for identity files in [brain-repo-owns-identity](../originals/brain-repo-owns-identity.md). Also referenced as the substrate whose ambient wiring is under audit in [audit-whether-the-plumbing-actually-fires](../originals/audit-whether-the-plumbing-actually-fires.md) and whose components need surfaced names in [if-sean-has-to-ask-the-name-surface-it-louder](../originals/if-sean-has-to-ask-the-name-surface-it-louder.md). observed: signal-detector capture, 2026-04-20.
